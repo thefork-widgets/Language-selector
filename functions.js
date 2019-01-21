@@ -1,8 +1,33 @@
 <!-- APPEND LANGUAGE DROPDOWN -->
  <script type="text/javascript">
 $(document).ready(function(){
-     $(".belt .container").append('<div class="dropdown"><a class="mainmenu toggle-login"><img src="" alt="" id="active" class="active"></a><div class="submenu"><ul class="menuitems"><li><a href="#"><img class="item" alt="es_ES" src="https://static.myfourchette.com/bundles/lafourchettemain/images/flag-es_ES.png?989"></a></li><li><a href="#"><img class="item" alt="en_GB" src="https://static.myfourchette.com/bundles/lafourchettemain/images/flag-en_GB.png?983"></a></li><li><a href="#"><img class="item" alt="fr_FR" src="https://static.myfourchette.com/bundles/lafourchettemain/images/flag-fr_FR.png?983"></a></li><li><a href="#"><img class="item" alt="it_IT" src="https://static.myfourchette.com/bundles/lafourchettemain/images/flag-it_IT.png?989"></a></li><li><a href="#"><img class="item" alt="pt_PT" src="https://static.myfourchette.com/bundles/lafourchettemain/images/flag-pt_PT.png?989"></a></li><li><a href="#"><img class="item" alt="pt_BR" src="https://static.myfourchette.com/bundles/lafourchettemain/images/flag-pt_BR.png?989"></a></li><li><a href="#"><img class="item" alt="da_DK" src="https://static.myfourchette.com/bundles/lafourchettemain/images/flag-da_DK.png?989"></a></li><li><a href="#"><img class="item" alt="nl_NL" src="https://static.myfourchette.com/bundles/lafourchettemain/images/flag-nl_NL.png?989"></a></li><li><a href="#"><img class="item" alt="sv_SE" src="https://static.myfourchette.com/bundles/lafourchettemain/images/flag-sv_SE.png?989"></a></li><li><a href="#"><img class="item" alt="tr_TR" src="https://static.myfourchette.com/bundles/lafourchettemain/images/flag-tr_TR.png?989"></a></li></ul></div></div>');
- });
+     $(".belt .container").append('<div id="dropdown"class="dropdown"><a class="mainmenu toggle-login"><img src="" alt="" id="active" class="active"></a><div class="submenu"><ul class="menuitems"><li><a href="#"><img class="item" alt="es_ES" src="https://static.myfourchette.com/bundles/lafourchettemain/images/flag-es_ES.png?989"> - ES</a></li><li><a href="#"><img class="item" alt="en_GB" src="https://static.myfourchette.com/bundles/lafourchettemain/images/flag-en_GB.png?983"> - EN</a></li><li><a href="#"><img class="item" alt="fr_FR" src="https://static.myfourchette.com/bundles/lafourchettemain/images/flag-fr_FR.png?983"> - FR</a></li><li><a href="#"><img class="item" alt="it_IT" src="https://static.myfourchette.com/bundles/lafourchettemain/images/flag-it_IT.png?989"> - IT</a></li><li><a href="#"><img class="item" alt="pt_PT" src="https://static.myfourchette.com/bundles/lafourchettemain/images/flag-pt_PT.png?989"> - PT</a></li><li><a href="#"><img class="item" alt="pt_BR" src="https://static.myfourchette.com/bundles/lafourchettemain/images/flag-pt_BR.png?989"> - BR</a></li><li><a href="#"><img class="item" alt="da_DK" src="https://static.myfourchette.com/bundles/lafourchettemain/images/flag-da_DK.png?989"> - DA</a></li><li><a href="#"><img class="item" alt="nl_NL" src="https://static.myfourchette.com/bundles/lafourchettemain/images/flag-nl_NL.png?989"> - NL</a></li><li><a href="#"><img class="item" alt="sv_SE" src="https://static.myfourchette.com/bundles/lafourchettemain/images/flag-sv_SE.png?989"> - SV</a></li><li><a href="#"><img class="item" alt="tr_TR" src="https://static.myfourchette.com/bundles/lafourchettemain/images/flag-tr_TR.png?989"> - TR</a></li></ul></div></div>');
+
+});
+
+$(document).ready(function(){
+  $(window).load(Resize);
+});
+window.onresize= Resize;
+
+function Resize(){
+  if(window.innerWidth > 590){
+     var test= document.getElementById("dropdown");
+     //test.style.width= 540+"px";
+     //console.log(test.style.width);
+     var marlft = (window.innerWidth-540)/2;
+     console.log("Margin-left before"+ test.style.marginLeft);
+     console.log("Margin-left after"+marlft);
+     test.style.marginLeft =  marlft+"px";
+     console.log(test.style.marginLeft);
+     
+  }else{
+    var test= document.getElementById("dropdown");
+    //test.style.width= 90+"%";
+    test.style.marginLeft = 15+"px";
+  };
+}
+
  </script>
 
 <!-- MANAGE FLAG EVENTS -->
