@@ -2,4 +2,4 @@
 
 Language selector for widget
 
-Change the widget url on url script controller in functions js
+Change the widget url's on url script controller in functions.js
